@@ -1,0 +1,120 @@
+@import "bootstrap.css";
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+nav#aside {
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+}
+nav#aside ul li span.glyphicon {
+  float: right;
+}
+.loading {
+  margin-top: 10px;
+  margin-left: 14px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-color: #333 #333 transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /*动画时间1s，线性变化，无限循环*/
+  animation: loading 1s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#friend_nav {
+  border-bottom: 1px solid #d8dee2;
+}
+#friend_nav ul {
+  list-style-type: none;
+  margin-bottom: 0px;
+}
+#friend_nav ul li {
+  padding: 10px 20px;
+  display: inline-block;
+}
+#friend_nav ul li.selected {
+  border-bottom: 1px solid #e36209;
+}
+#friend_nav ul li a {
+  text-decoration: none;
+  color: #586069;
+  font-size: 14px;
+}
+#friend_nav ul li a:hover {
+  color: #24292e;
+  text-decoration: none;
+}
+section .tab {
+  display: none;
+  padding-top: 20px;
+}
+section .tab .results .item {
+  margin-bottom: 20px;
+}
+section .tab .results .item img {
+  vertical-align: middle;
+  width: 48px;
+  border-radius: 50%;
+  border: 2px solid #d8dee2;
+  margin-right: 10px;
+}
+section .tab .results .item span {
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 2rem;
+}
+section .tab .results .item a {
+  margin-left: 10px;
+  vertical-align: -webkit-baseline-middle;
+}
+section .tab .results .item:first-of-type {
+  margin-top: 20px;
+}
+section .tab .results.init .loading,
+section .tab .results.init .items,
+section .tab .results.init .no-result {
+  display: none;
+}
+section .tab .results.searching .loading {
+  display: block;
+}
+section .tab .results.searching .items,
+section .tab .results.searching .no-result {
+  display: none;
+}
+section .tab .results.full .items {
+  display: block;
+}
+section .tab .results.full .loading,
+section .tab .results.full .no-result {
+  display: none;
+}
+section .tab .results.empty .no-result {
+  display: block;
+}
+section .tab .results.empty .loading,
+section .tab .results.empty .items {
+  display: none;
+}
+section .tab.current {
+  display: block;
+}
+section div#search_tab #search {
+  width: 35%;
+  padding: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #1DA1F2;
+}

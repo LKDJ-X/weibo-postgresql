@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>weibo - Friend</title>
+    <link rel="stylesheet" href="/static/styles/friend.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h2>Friend</h2>
+
+        <div class="row">
+            <div class="col-md-3">
+                <nav id="aside">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation"><a href="{{ url_for('home') }}">Home<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                        <li role="presentation"><a href="{{ url_for('user', user_tag=user_tag) }}">Profile<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                        <li role="presentation" class="active"><a href="{{ url_for('friend') }}">Friend<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                        <li role="presentation"><a href="{{ url_for('logout') }}">Log Out<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-9" style="padding-left: 30px">
+                <nav id="friend_nav">
+                    <ul id="nav_list">
+                        <li id="search_li" class="selected"><a href="javascript:void 0">Search</a></li>
+                        <li id="follower_li"><a href="javascript:void 0">Followers</a></li>
+                        <li id="following_li"><a href="javascript:void 0">Following</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <div id="search_tab" class="tab current">
+                        <input id="search" type="text">
+                        <div class="results init">
+                            <div class="loading"></div>
+                            <div class="items"></div>
+                            <div class="no-result">
+                                No result.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="followers_tab" class="tab">
+                        <div class="results init">
+                            <div class="loading"></div>
+                            <div class="items"></div>
+                            <div class="no-result">
+                                No result.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="following_tab" class="tab">
+                        <div class="results init">
+                            <div class="loading"></div>
+                            <div class="items"></div>
+                            <div class="no-result">
+                                No result.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+<script type="text/template" id="template">
+    <div class="item">
+        <img src="/static/img/user.png" alt="profile">
+        <span><%= user_tag%>/<%= email%></span>
+        <% if(follow){ %>
+            <a href="javascript:void 0" data-url="/follow/<%= user_id%>" data-type="follow">Follow</a>
+        <% }%>
+        <% if(unfollow){ %>
+            <a href="javascript:void 0" data-url="/unfollow/<%= user_id%>" data-type="unfollow">Unfollow</a>
+        <% }%>
+    </div>
+</script>
+<script src="/static/scripts/jquery-3.2.1.min.js"></script>
+<script src="/static/scripts/underscore-min.js"></script>
+<script src="/static/scripts/friend.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>weibo - User</title>
+    <link rel="stylesheet" href="/static/styles/user.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Profile</h2>
+
+
+        <div class="row">
+            <div class="col-md-3">
+                <nav id="aside">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li role="presentation"><a href="{{ url_for('home') }}">Home<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                        <li role="presentation" class="active"><a href="{{ url_for('user', user_tag=user_tag) }}">Profile<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                        <li role="presentation"><a href="{{ url_for('logout') }}">Log Out<span class="glyphicon glyphicon-menu-right"></span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-md-9">
+{#                {% if error %}Error: {{ error }} <br> {% endif %}#}
+{#                {% if user_tag %}User tag: {{ user_tag }} <br> {% endif %}#}
+{#                {% if user_name %}User name: {{ user_name }} <br> {% endif %}#}
+{#                {% if own and user_mail %}User mail: {{ user_mail }} <br> {% endif %}#}
+{#                {% if user_description %}User description: {{ user_description }} <br> {% endif %}#}
+{#                {% if creation_date %}Creation date: {{ creation_date }} <br> {% endif %}#}
+                {% if error %}Error: {{ error }} <br> {% endif %}
+                {% if own and user_mail %}
+                    <div class="item">
+                        <label>User Mail</label>
+                        <input type="text" value={{ user_mail }} >
+                    </div>
+                {% endif %}
+                {% if user_tag %}
+                    <div class="item">
+                        <label>User Tag</label>
+                        <input type="text" value={{user_tag}} disabled>
+
+                    </div>
+                {% endif %}
+                {% if user_name %}
+                    <div class="item">
+                        <label>User Name</label>
+                        <input type="text" value={{user_name}} >
+
+                    </div>
+                {% endif %}
+                {% if user_description %}
+                    <div class="item">
+                        <label>User Description</label>
+                        <input type="text" value={{ user_description }} >
+
+                    </div>
+                {% endif %}
+                {% if creation_date %}
+                    <div class="item">
+                        <label>Creation Date</label>
+                        <input type="text" value={{ creation_date }} disabled>
+                    </div>
+                {% endif %}
+                    <div class="user-area">
+
+
+                            <button id="post_btn" type="submit">submit</button>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

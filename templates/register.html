@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weibo - Register</title>
+    <link rel="stylesheet" href="/static/styles/login.css"/>
+</head>
+<body>
+    <div id="main">
+        <form name="login" method="post">
+            <header>Join weibo</header>
+            <section>
+                <div class="item">
+                    <label title="tag">Tag</label>
+                    <input name="tag" type="text" {% if tag %} value="{{ tag }}" {% endif %}>
+                </div>
+                <div class="item">
+                    <label title="email">Email</label>
+                    <input name="email" type="email" {% if email %} value="{{ email }}" {% endif %}>
+                </div>
+                <div class="item">
+                    <label title="password">Password</label>
+                    <input name="password" type="password">
+                </div>
+                <div class="item">
+                    <label title="password_confirm">Password Confirmation</label>
+                    <input name="password_confirm" type="password">
+                </div>
+                <input type="submit" name="submit" value="Create an account" class="btn-primary">
+            </section>
+        </form>
+        {% if error %}
+            <p class="error"> Error : {{ error }}</p>
+        {% endif %}
+        <footer>
+            <span>Have an account.</span>
+            <a href="/login">Sign in</a>
+        </footer>
+    </div>
+</body>
+</html>

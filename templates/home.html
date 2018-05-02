@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>weibo - Home</title>
+    <link rel="stylesheet" href="/static/styles/home.css">
+
+    <script src="/static/scripts/jquery-3.2.1.min.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+
+    <script>
+        function addPost(user_name, date, content, id,  reverse) {
+            var html = '\
+            <div class="media" id ="' + id + '">\
+                <div class="media-left">\
+                    <a href="#">\
+                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="/static/img/user.png" data-holder-rendered="true">\
+                    </a>\
+                </div>\
+                <div class="media-body">\
+                    <h4 class="media-heading">' + user_name + ' <small class="date">' + date + '</small></h4>\
+                    <div id="' + id + '" class="content">' + content + '</div>\
+                    <button id="' + id + '" type="button" name="edit_post" class="btn btn-default delete">\
+                        <span id="' + id + '" class="glyphicon glyphicon-edit" aria-hidden="true"></span>\
+                    </button>\
+                    <button id="' + id + '" type="button" name="delete_post" class="btn btn-default delete" onclick="delete_post(' + id + ')">\
+                        <span id="' + id + '" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>\
+                    </button>\
+                </div>\
+                <div id="' + id + '" class="edit_field" style="display: none;" name="edit_field">\
+                        <textarea id="' + id + '" name="edit_post" type="content" placeholder="Edit post">' + content + '</textarea><br>\
+                        <button id="' + id + '" type="button" name="submit_edit_post" class="btn btn-default btn-xs">\
+                            <span id="' + id + '" class="glyphicon glyphicon-check" aria-hidden="true"></span>\
+                        </button>\
+                </div>\
+            </div>';
+
+            var div = document.createElement('div');
+            div.className = 'post';
+            div.id = id;
+            div.innerHTML = html;
+
+            console.log($(div));
+
+            if (reverse) {
+                $('#container').prepend(div)
+            } else {
+                $('#container').append(div)
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <h2>Home</h2>
+
+    <div class="row">
+        <div class="medium-3 columns" style="background-color:#f1f1f1;">
+            <ul class="side-nav">
+                <li class="active"><a style="font-size: large;" href="{{ url_for('home') }}">Home</a></li>
+                <li ><a style="font-size: large;" href="{{ url_for('user', user_tag=user_tag) }}">Profile</a></li>
+                <li ><a style="font-size: large;" href="{{ url_for('logout') }}">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="medium-9 columns">
+            <div class="user-wall">
+                <img src="/static/img/user.png">
+                <div class="info">
+                    <div class="name">{{ user_name }}</div>
+                    <div class="stat">
+                        <div class="stat-item">
+                            {% if tweets %}
+                                <div class="number">{{ tweets[0][7] }}</div>
+                            {% else %}
+                                <div class="number">0</div>
+                            {% endif %}
+                            <div class="field">POSTS</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">0</div>
+                            <div class="field">FOLLOWING</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">0</div>
+                            <div class="field">FOLLOWER</div>
+                        </div>
+                    </div>
+                    <div id="post-area">
+                        <form name="post" method="post" action=/post>
+                            <textarea id="content" type="text" name="content"
+                                      placeholder="write a post?"></textarea>
+                            <button id="post_btn" type="submit">Post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="container">
+                <script>$(document).ready(function () {
+                    {% for post in tweets %}
+                        addPost('{{ post[0] }}', '{{ post[2] }}', '{{ post[3] }}', {{ post[4] }}, false);
+                    {% endfor %}
+                })
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function delete_post(post_id) {
+        $.post('delete_post' + '/' + post_id, function (data) {
+            var json = JSON && JSON.parse(data) || $.parseJSON(data);
+            if (json.success) {
+                $("#" + post_id).remove();
+            } else {
+                // TODO Print error
+            }
+        });
+    }
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('button[name="edit_post"]').click(function (e) {
+            var target = $(e).attr('target');
+            var id = $(target).attr('id');
+            $("#" + id + ".content").toggle();
+            $("#" + id + ".edit_field").toggle();
+        })
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('button[name="submit_edit_post"]').click(function (e) {
+            // TODO Edit post
+            var target = $(e).attr('target');
+            var id = $(target).attr('id');
+            // FIXME var content = $("#" + id + ".edit_post").innerHTML;
+            var content = $($("#" + id + ".edit_field").children()[0]).val();
+            var args = {content: content};
+            console.log(args);
+            $.post('edit_post' + '/' + id, args, function (data) {
+                var json = JSON && JSON.parse(data) || $.parseJSON(data);
+                if (json.success) {
+                    $("#" + id + ".edit_field").toggle();
+                    var box = $("#" + id + ".content");
+                    box.text(content);
+                    box.toggle();
+
+                } else {
+                    // TODO Print error
+                }
+            });
+        })
+    })
+</script>
+<script src="/static/scripts/home.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('form[name="post"]').submit(function (event) {
+            event.preventDefault();
+
+            var form = $(this);
+            var content = form.find("textarea[name='content']").val();
+            var url = form.attr('action');
+            $.post(url, {content: content}, function (data) {
+                var json = JSON && JSON.parse(data) || $.parseJSON(data);
+                console.log(json);
+                if (json.success) {
+                    addPost('{{ user_tag }}', json.post_data.creation_date, json.post_data.content, json.post_data.post_id, 0, 0, true)
+                } else {
+                    // TODO Print error
+                }
+            })
+        })
+    })
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('form[name="comment_post"]').submit(function (event) {
+            event.preventDefault();
+
+            var form = $(this);
+            var content = form.find("textarea[name='comment']").val();
+            var url = form.attr('action');
+
+            $.post(url, {comment: content}, function (data) {
+                var json = JSON && JSON.parse(data) || $.parseJSON(data);
+                console.log(json);
+                if (json.success) {
+                    addComment('{{ user_tag }}', json.comment_data.creation_date, json.comment_data.content, json.comment_data.post_id, 0, 0, true);
+                }
+                else {
+                    // TODO Print error
+                }
+            })
+        })
+    })
+</script>
+<script src="/static/scripts/home.js"></script>
+
+</body>
+</html>

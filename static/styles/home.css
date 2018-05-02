@@ -1,0 +1,104 @@
+@import "bootstrap.css";
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+html,
+body {
+  height: 100%;
+}
+.post {
+  width: 75%;
+  margin-top: 30px;
+}
+.post + .post {
+  margin-top: 10px;
+}
+.post .media .media-left img {
+  width: 48px;
+  border-radius: 50%;
+  border: 2px solid #d8dee2;
+}
+.post .media .media-body .content {
+  font-size: 2rem;
+}
+.post .media .media-body small.date {
+  padding-left: 5px;
+}
+.post .media .media-body button.like,
+.post .media .media-body button.comment,
+.post .media .media-body button.delete {
+  border: none;
+  background-color: #f9f9f9;
+}
+.comments {
+  margin-left: 8%;
+}
+
+nav {
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+}
+nav ul li span.glyphicon {
+  float: right;
+}
+.user-wall img {
+  width: 150px;
+  border-radius: 75px;
+  border: 2px solid #d8dee2;
+  vertical-align: top;
+}
+.user-wall .info {
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+}
+.user-wall .info .name {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.user-wall .info .stat .stat-item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 25px;
+}
+.user-wall .info .stat .stat-item .number {
+  font-size: 2rem;
+}
+.user-wall .info .stat .stat-item .field {
+  color: #777777;
+  font-size: 12px;
+}
+.user-wall .info #post-area {
+  margin-top: 10px;
+  position: relative;
+}
+.user-wall .info #post-area form textarea {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #1DA1F2;
+  padding-left: 5px;
+  resize: none;
+  transition: height 0.5s;
+}
+.user-wall .info #post-area form button[type="submit"] {
+  display: none;
+  position: absolute;
+  right: 0;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #1DA1F2;
+  background-color: #1DA1F2;
+  margin-top: 5px;
+}
+.user-wall .info #post-area.higher form textarea {
+  height: 100px;
+}
+.user-wall .info #post-area.higher form button[type="submit"] {
+  display: inherit;
+}

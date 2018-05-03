@@ -7,6 +7,13 @@
 
     <title>weibo - User</title>
     <link rel="stylesheet" href="/static/styles/user.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+    <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -14,23 +21,15 @@
 
 
         <div class="row">
-            <div class="col-md-3">
-                <nav id="aside">
-                    <ul class="nav nav-pills nav-stacked">
-                        <li role="presentation"><a href="{{ url_for('home') }}">Home<span class="glyphicon glyphicon-menu-right"></span></a></li>
-                        <li role="presentation"><a href="{{ url_for('friend') }}">Friend<span class="glyphicon glyphicon-menu-right"></span></a></li>
-                        <li role="presentation" class="active"><a href="{{ url_for('user', user_tag=user_tag) }}">Profile<span class="glyphicon glyphicon-menu-right"></span></a></li>
-                        <li role="presentation"><a href="{{ url_for('logout') }}">Log Out<span class="glyphicon glyphicon-menu-right"></span></a></li>
-                    </ul>
-                </nav>
+            <div class="medium-3 columns" style="background-color:#f1f1f1;">
+                <ul class="side-nav">
+                        <li ><a style="font-size: large;" href="{{ url_for('home') }}">Home</a></li>
+                        <li ><a style="font-size: large;" href="{{ url_for('friend') }}">Friend</a></li>
+                        <li class="active"><a style="font-size: large;" href="{{ url_for('user', user_tag=user_tag) }}">Profile</a></li>
+                        <li ><a style="font-size: large;" href="{{ url_for('logout') }}">Log Out</a></li>
+                </ul>
             </div>
-            <div class="col-md-9">
-{#                {% if error %}Error: {{ error }} <br> {% endif %}#}
-{#                {% if user_tag %}User tag: {{ user_tag }} <br> {% endif %}#}
-{#                {% if user_name %}User name: {{ user_name }} <br> {% endif %}#}
-{#                {% if own and user_mail %}User mail: {{ user_mail }} <br> {% endif %}#}
-{#                {% if user_description %}User description: {{ user_description }} <br> {% endif %}#}
-{#                {% if creation_date %}Creation date: {{ creation_date }} <br> {% endif %}#}
+            <div class="medium-9 columns">
                 {% if error %}Error: {{ error }} <br> {% endif %}
                 {% if own and user_mail %}
                     <div class="item">

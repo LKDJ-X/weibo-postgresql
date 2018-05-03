@@ -90,12 +90,20 @@
                             <div class="field">POSTS</div>
                         </div>
                         <div class="stat-item">
-                            <div class="number">0</div>
+                            {% if tweets %}
+                                <div class="number">{{ tweets[0][8] }}</div>
+                            {% else %}
+                                <div class="number">0</div>
+                            {% endif %}
                             <div class="field">FOLLOWING</div>
                         </div>
                         <div class="stat-item">
-                            <div class="number">0</div>
-                            <div class="field">FOLLOWER</div>
+                            {% if tweets %}
+                                <div class="number">{{ tweets[0][9] }}</div>
+                            {% else %}
+                                <div class="number">0</div>
+                            {% endif %}
+                            <div class="field">FOLLOWERS</div>
                         </div>
                     </div>
                     <div id="post-area">

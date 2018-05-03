@@ -97,28 +97,10 @@ CREATE OR REPLACE FUNCTION users_posts_decrement() RETURNS TRIGGER AS
   END;
   $BODY$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION users_comments_increment() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE users SET comments = comments + 1 WHERE users.user_id = NEW.user_id;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION users_comments_decrement() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE users SET comments = comments - 1 WHERE users.user_id = OLD.user_id;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
 CREATE OR REPLACE FUNCTION users_following_increment() RETURNS TRIGGER AS
   $BODY$
   BEGIN
-    UPDATE users SET following = users.following + 1 WHERE users.user_id = NEW.user_id;
+    UPDATE users SET following = users.following + 1 WHERE users.user_id = NEW.friend_id;
 
     RETURN NEW;
   END;
@@ -127,7 +109,7 @@ CREATE OR REPLACE FUNCTION users_following_increment() RETURNS TRIGGER AS
 CREATE OR REPLACE FUNCTION users_following_decrement() RETURNS TRIGGER AS
   $BODY$
   BEGIN
-    UPDATE users SET following = users.following - 1 WHERE users.user_id = OLD.user_id;
+    UPDATE users SET following = users.following - 1 WHERE users.user_id = OLD.friend_id;
 
     RETURN NEW;
   END;
@@ -151,71 +133,9 @@ CREATE OR REPLACE FUNCTION users_followed_decrement() RETURNS TRIGGER AS
   END;
   $BODY$ LANGUAGE plpgsql;
 
-CREATE OR REPLACE FUNCTION posts_comments_increment() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE posts SET comments = posts.comments + 1 WHERE posts.post_id = NEW.post_id;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION posts_comments_decrement() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE posts SET comments = posts.comments - 1 WHERE posts.post_id = OLD.post_id;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION posts_likes_increment() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE posts SET likes = posts.likes + 1 WHERE posts.post_id = NEW.post_id;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION posts_likes_decrement() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE posts SET likes = posts.likes - 1 WHERE posts.post_id = OLD.post_id;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION comments_likes_increment() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE comments SET likes = comments.likes + 1 WHERE comment_id = NEW.comment_it;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION comments_likes_decrement() RETURNS TRIGGER AS
-  $BODY$
-  BEGIN
-    UPDATE comments SET likes = comments.likes - 1 WHERE comment_id = OLD.comment_it;
-
-    RETURN NEW;
-  END;
-  $BODY$ LANGUAGE plpgsql;
-
 CREATE TRIGGER users_posts_trigger_insert AFTER INSERT ON posts FOR EACH ROW EXECUTE PROCEDURE users_posts_increment();
 CREATE TRIGGER users_posts_trigger_delete AFTER DELETE ON posts FOR EACH ROW EXECUTE PROCEDURE users_posts_decrement();
-CREATE TRIGGER users_comments_trigger_insert AFTER INSERT ON comments FOR EACH ROW EXECUTE PROCEDURE users_comments_increment();
-CREATE TRIGGER users_comments_trigger_delete AFTER DELETE ON comments FOR EACH ROW EXECUTE PROCEDURE users_comments_decrement();
-CREATE TRIGGER posts_likes_trigger_insert AFTER INSERT ON likes_posts FOR EACH ROW EXECUTE PROCEDURE posts_likes_increment();
-CREATE TRIGGER posts_likes_trigger_delete AFTER DELETE ON likes_posts FOR EACH ROW EXECUTE PROCEDURE posts_likes_decrement();
 CREATE TRIGGER users_following_trigger_insert AFTER INSERT ON friendship FOR EACH ROW EXECUTE PROCEDURE users_following_increment();
 CREATE TRIGGER users_following_trigger_delete AFTER DELETE ON friendship FOR EACH ROW EXECUTE PROCEDURE users_following_decrement();
 CREATE TRIGGER users_followed_trigger_insert AFTER INSERT ON friendship FOR EACH ROW EXECUTE PROCEDURE users_followed_increment();
 CREATE TRIGGER users_followed_trigger_delete AFTER DELETE ON friendship FOR EACH ROW EXECUTE PROCEDURE users_followed_decrement();
-CREATE TRIGGER posts_comments_trigger_insert AFTER INSERT ON comments FOR EACH ROW EXECUTE PROCEDURE posts_comments_increment();
-CREATE TRIGGER posts_comments_trigger_delete AFTER DELETE ON comments FOR EACH ROW EXECUTE PROCEDURE posts_comments_decrement();
-CREATE TRIGGER comments_likes_trigger_insert AFTER INSERT ON likes_comments FOR EACH ROW EXECUTE PROCEDURE comments_likes_increment();
-CREATE TRIGGER comments_likes_trigger_delete AFTER DELETE ON likes_comments FOR EACH ROW EXECUTE PROCEDURE comments_likes_decrement();

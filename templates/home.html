@@ -82,34 +82,21 @@
                     <div class="name">{{ user_name }}</div>
                     <div class="stat">
                         <div class="stat-item">
-                            {% if tweets %}
-                                <div class="number">{{ tweets[0][7] }}</div>
-                            {% else %}
-                                <div class="number">0</div>
-                            {% endif %}
+                            <div class="number">{{ counts[0][0] }}</div>
                             <div class="field">POSTS</div>
                         </div>
                         <div class="stat-item">
-                            {% if tweets %}
-                                <div class="number">{{ tweets[0][8] }}</div>
-                            {% else %}
-                                <div class="number">0</div>
-                            {% endif %}
+                            <div class="number">{{ counts[0][1] }}</div>
                             <div class="field">FOLLOWING</div>
                         </div>
                         <div class="stat-item">
-                            {% if tweets %}
-                                <div class="number">{{ tweets[0][9] }}</div>
-                            {% else %}
-                                <div class="number">0</div>
-                            {% endif %}
+                            <div class="number">{{ counts[0][2] }}</div>
                             <div class="field">FOLLOWERS</div>
                         </div>
                     </div>
                     <div id="post-area">
                         <form name="post" method="post" action=/post>
-                            <textarea id="content" type="text" name="content"
-                                      placeholder="write a post?"></textarea>
+                            <textarea id="content" type="text" name="content" placeholder="write a post?"></textarea>
                             <button id="post_btn" type="submit">Post</button>
                         </form>
                     </div>

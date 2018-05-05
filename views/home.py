@@ -18,9 +18,13 @@ def home():
           WHERE  (posts.user_id IN (SELECT user_id FROM friendship WHERE friend_id = %s) OR posts.user_id = %s)
           AND users.user_id = posts.user_id  
           ORDER BY posts.creation_date DESC''', (user_id, user_id))
+
+        counts = sql.execute_query('SELECT users.posts, users.following, users.followed FROM users  WHERE users.user_id = %s', (user_id,))
+
         if results is None:
             results = []
         return render_template('home.html',
                                user_tag=user_tag,
                                user_name=user_name,
+                               counts=counts,
                                tweets=results)

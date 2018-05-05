@@ -1,7 +1,7 @@
 from flask import redirect, request, session, url_for, json, render_template
 from helpers import sql
 
-ALREADY_FOLLOW = "You have followd the user"
+ALREADY_FOLLOW = "You have followed the user"
 UNFOLLOW_FAIL = "Unfollow failed"
 CANNOT_FOLLOW_YOURSELF = "Sorry, you couldn't follow yourself:)"
 
@@ -34,12 +34,20 @@ def follow(following_id):
         })
 
     if request.method == "POST":
-        results = sql.execute_update("""
-                      INSERT INTO friendship VALUES (%s, %s)
-                      """,
-                      (following_id, user_id))
-        if(results != 1):
+        friendship = sql.execute_query("""
+                            SELECT * FROM friendship f
+                            WHERE f.user_id = %s and f.friend_id = %s
+                            """,
+                            (following_id, user_id))
+        if friendship:
             error = ALREADY_FOLLOW
+        else:
+            results = sql.execute_update("""
+                          INSERT INTO friendship VALUES (%s, %s)
+                          """,
+                          (following_id, user_id))
+
+
 
         return json.dumps({
             "success": error is None,
@@ -109,48 +117,6 @@ def follower_list():
         if results is None:
             results = []
         results = transTuple2Dict(results)
-
-        return json.dumps({
-            "success": error is None,
-            "error": error,
-            "results": results
-        })
-
-def following_count():
-    error = None
-    user_id = session.get('user', None)
-
-    if user_id is None:
-        return redirect(url_for('home'))
-
-    if request.method == "GET":
-        results = sql.execute_update("""
-                      SELECT following
-                      FROM users
-                      WHERE user_id = %s
-                      """,
-                      (user_id,))
-
-        return json.dumps({
-            "success": error is None,
-            "error": error,
-            "results": results
-        })
-
-def follower_count():
-    error = None
-    user_id = session.get('user', None)
-
-    if user_id is None:
-        return redirect(url_for('home'))
-
-    if request.method == "GET":
-        results = sql.execute_update("""
-                      SELECT followed
-                      FROM users
-                      WHERE user_id = %s
-                      """,
-                      (user_id,))
 
         return json.dumps({
             "success": error is None,

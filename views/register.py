@@ -8,7 +8,7 @@ from validate_email import validate_email
 
 INVALID_FORM = 'Please fill in all required fields'
 INVALID_EMAIL = 'Invalid email'
-INVALID_PASSWORD = 'Password should be at least 8 characters long'
+INVALID_PASSWORD = 'Password should be at least 6 characters long'
 PASSWORD_NOT_MATCHING = 'Passwords are not the same ones'
 EMAIL_ALREADY_IN_USE = 'This email address is already used'
 TAG_ALREADY_IN_USE = 'This username is already in use'
@@ -37,7 +37,7 @@ def register():
             error = INVALID_FORM
         elif not validate_email(email) or len(email) > 256:
             error = INVALID_EMAIL
-        elif len(password) < 8:
+        elif len(password) < 6:
             error = INVALID_PASSWORD
         elif password != password_confirm:
             error = PASSWORD_NOT_MATCHING

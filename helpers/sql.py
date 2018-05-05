@@ -1,17 +1,18 @@
 import psycopg2
-import psycopg2.pool
-
 
 INTERNAL_ERROR = 'Internal error occurred, please try again later'
 
 conn = None
 
-
 def init():
     global conn
-
     conn = psycopg2.connect(database="weibo", user="postgres", password="123456", host="localhost", port="5432")
-    print("Opened database successfully")
+    print("connect database weibo successfully")
+
+def init_test():
+    global conn
+    conn = psycopg2.connect(database="weibo_test", user="postgres", password="123456", host="localhost", port="5432")
+    print("connect database weibo successfully")
 
 
 def shutdown():

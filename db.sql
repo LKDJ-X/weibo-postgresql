@@ -133,9 +133,29 @@ CREATE OR REPLACE FUNCTION users_followed_decrement() RETURNS TRIGGER AS
   END;
   $BODY$ LANGUAGE plpgsql;
 
+CREATE OR REPLACE FUNCTION posts_likes_increment() RETURNS TRIGGER AS
+  $BODY$
+  BEGIN
+    UPDATE posts SET likes = posts.likes + 1 WHERE posts.post_id = NEW.post_id;
+
+    RETURN NEW;
+  END;
+  $BODY$ LANGUAGE plpgsql;
+
+CREATE OR REPLACE FUNCTION posts_likes_decrement() RETURNS TRIGGER AS
+  $BODY$
+  BEGIN
+    UPDATE posts SET likes = posts.likes - 1 WHERE posts.post_id = OLD.post_id;
+
+    RETURN NEW;
+  END;
+  $BODY$ LANGUAGE plpgsql;
+
 CREATE TRIGGER users_posts_trigger_insert AFTER INSERT ON posts FOR EACH ROW EXECUTE PROCEDURE users_posts_increment();
 CREATE TRIGGER users_posts_trigger_delete AFTER DELETE ON posts FOR EACH ROW EXECUTE PROCEDURE users_posts_decrement();
 CREATE TRIGGER users_following_trigger_insert AFTER INSERT ON friendship FOR EACH ROW EXECUTE PROCEDURE users_following_increment();
 CREATE TRIGGER users_following_trigger_delete AFTER DELETE ON friendship FOR EACH ROW EXECUTE PROCEDURE users_following_decrement();
 CREATE TRIGGER users_followed_trigger_insert AFTER INSERT ON friendship FOR EACH ROW EXECUTE PROCEDURE users_followed_increment();
 CREATE TRIGGER users_followed_trigger_delete AFTER DELETE ON friendship FOR EACH ROW EXECUTE PROCEDURE users_followed_decrement();
+CREATE TRIGGER posts_likes_trigger_insert AFTER INSERT ON likes_posts FOR EACH ROW EXECUTE PROCEDURE posts_likes_increment();
+CREATE TRIGGER posts_likes_trigger_delete AFTER DELETE ON likes_posts FOR EACH ROW EXECUTE PROCEDURE posts_likes_decrement();

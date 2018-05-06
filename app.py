@@ -4,7 +4,7 @@ from views.home import home
 from views.login import login
 from views.logout import logout
 from views.user import user
-from views.post import post, edit_post, delete_post
+from views.post import post, edit_post, delete_post, like_post, dislike_post
 from views.friend import search_user, friend, follow, unfollow, following_list, follower_list
 
 
@@ -20,6 +20,8 @@ app.add_url_rule('/user/<user_tag>', 'user', user)
 app.add_url_rule('/post', 'post', post, methods=["POST"])
 app.add_url_rule('/edit_post/<post_id>', 'edit_post', edit_post, methods=["POST"])
 app.add_url_rule('/delete_post/<post_id>', 'delete_post', delete_post, methods=["POST"])
+app.add_url_rule('/like_post/<post_id>', 'like_post', like_post, methods=["POST"])
+app.add_url_rule('/dislike_post/<post_id>', 'dislike_post', dislike_post, methods=["POST"])
 
 # friend API
 app.add_url_rule('/friend', 'friend', friend, methods=["GET"])

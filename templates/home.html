@@ -18,7 +18,7 @@
     <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
 
     <script>
-        function addPost(user_name, date, content, id,  reverse) {
+        function addPost(user_name, date, content, id, likes, mylike, reverse) {
             var html = '\
             <div class="media" id ="' + id + '">\
                 <div class="media-left">\
@@ -31,6 +31,9 @@
                     <div id="' + id + '" class="content">' + content + '</div>\
                     <button id="' + id + '" type="button" name="edit_post" class="btn btn-default delete">\
                         <span id="' + id + '" class="glyphicon glyphicon-edit" aria-hidden="true"></span>\
+                    </button>\
+                    <button id="' + id + '" type="button" name="like_post" class="btn btn-default like"' + (mylike > 0 ? 'style="color:#FF3333;"' : '') + '>\
+                        <span id="' + id + '" class="glyphicon glyphicon-heart" aria-hidden="true"> ' + likes + '</span>\
                     </button>\
                     <button id="' + id + '" type="button" name="delete_post" class="btn btn-default delete" onclick="delete_post(' + id + ')">\
                         <span id="' + id + '" class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>\
@@ -57,6 +60,38 @@
                 $('#container').append(div)
             }
 
+            $('button[name="like_post"][id=' + id + ']').click(function (e) {
+                var target = $(e).attr('target');
+                var button = this;
+
+                if (this.style.color == "") {
+                    $.post('like_post/' + id, function (data) {
+                        var json = JSON && JSON.parse(data) || $.parseJSON(data);
+                        if (json.success) {
+                            button.style.color = "#ff3333";
+                            var like = $("span#" + id + ".glyphicon-heart");
+                            var likeint = parseInt(like.text());
+                            like.text(' ' + (likeint + 1));
+                        } else {
+                            // TODO Print error
+                        }
+                    });
+
+                } else {
+                    $.post('dislike_post/' + id, function (data) {
+                        var json = JSON && JSON.parse(data) || $.parseJSON(data);
+                        if (json.success) {
+                            button.style.color = "";
+                            var like = $("span#" + id + ".glyphicon-heart");
+                            var likeint = parseInt(like.text());
+                            like.text(' ' + (likeint - 1));
+                        } else {
+                            // TODO Print error
+                        }
+                    });
+                }
+
+            });
         }
     </script>
 
@@ -106,7 +141,7 @@
             <div id="container">
                 <script>$(document).ready(function () {
                     {% for post in tweets %}
-                        addPost('{{ post[0] }}', '{{ post[2] }}', '{{ post[3] }}', {{ post[4] }}, false);
+                        addPost('{{ post[0] }}', '{{ post[2] }}', '{{ post[3] }}', {{ post[4] }}, {{ post[5] }}, {{ post[10] }}, false);
                     {% endfor %}
                 })
                 </script>

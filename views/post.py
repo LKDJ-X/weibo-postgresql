@@ -75,3 +75,37 @@ def edit_post(post_id):
                 error = POST_NOT_FOUND
 
     return json.dumps({'success': error is None, 'error': error})
+
+def like_post(post_id):
+    error = None
+    user_id = session.get('user', None)
+
+    if user_id is None:
+        return redirect(url_for('home'))
+
+    if request.method == 'POST':
+        results = sql.execute_update('INSERT INTO likes_posts (post_id, user_id) VALUES (%s, %s) ON CONFLICT DO NOTHING',
+                                     (post_id, user_id))
+
+        if results != 1:
+            error = POST_NOT_FOUND
+
+    return json.dumps({'success': error is None, 'error': error})
+
+
+def dislike_post(post_id):
+    error = None
+    user_id = session.get('user', None)
+
+    if user_id is None:
+        return redirect(url_for('home'))
+
+    if request.method == 'POST':
+        results = sql.execute_update('DELETE FROM likes_posts WHERE user_id = %s AND post_id = %s',
+                                     (user_id, post_id))
+
+        if results != 1:
+            error = POST_NOT_FOUND
+
+    return json.dumps({'success': error is None, 'error': error})
+

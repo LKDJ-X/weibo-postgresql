@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ff03173-0f8b-46d6-8c37-7d2f94b6ec0a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/post_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/scripts/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/scripts/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/post.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/post.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,48 +19,59 @@
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_follower_list_success.coverage" NAME="Unittests for friend_test.FriendTestCase.test_follower_list_success Coverage Results" MODIFIED="1525506900592" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$login.coverage" NAME="login Coverage Results" MODIFIED="1525417679862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/views" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follower_count_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follower_count_success Coverage Results" MODIFIED="1525439025788" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follow_followed.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follow_followed Coverage Results" MODIFIED="1525423607468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follower_list_fail.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follower_list_fail Coverage Results" MODIFIED="1525438260390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$weibo.coverage" NAME="weibo Coverage Results" MODIFIED="1526106386137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_like_post_fail.coverage" NAME="Unittests for post_test.PostTestCase.test_like_post_fail Coverage Results" MODIFIED="1526023100970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follow_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follow_success Coverage Results" MODIFIED="1525422573310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follow_myself.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follow_myself Coverage Results" MODIFIED="1525423691604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_search_user.coverage" NAME="Unittests for friend_test.FriendTestCase.test_search_user Coverage Results" MODIFIED="1525504600667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_following_list_fail.coverage" NAME="Unittests for friend_test.FriendTestCase.test_following_list_fail Coverage Results" MODIFIED="1525506892917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_search_user.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_search_user Coverage Results" MODIFIED="1525446044683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follower_list_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follower_list_success Coverage Results" MODIFIED="1525438224015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_post_success.coverage" NAME="Unittests for post_test.PostTestCase.test_post_success Coverage Results" MODIFIED="1525866699879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_in_app_test_py.coverage" NAME="Unittests in app_test.py Coverage Results" MODIFIED="1525423837843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_in_friend_test_py.coverage" NAME="Unittests in friend_test.py Coverage Results" MODIFIED="1525500474589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/weibo$Flask__test_friend_test_py_.coverage" NAME="Flask (test/friend_test.py) Coverage Results" MODIFIED="1525333820271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_like_post_success.coverage" NAME="Unittests for post_test.PostTestCase.test_like_post_success Coverage Results" MODIFIED="1526023188230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_in_post_test_py.coverage" NAME="Unittests in post_test.py Coverage Results" MODIFIED="1526105624350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_search_user_fail.coverage" NAME="Unittests for friend_test.FriendTestCase.test_search_user_fail Coverage Results" MODIFIED="1525504409562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follow_followed.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follow_followed Coverage Results" MODIFIED="1525423607468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_following_count_fail.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_following_count_fail Coverage Results" MODIFIED="1525438529315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase.coverage" NAME="Unittests for app_test.FlaskrTestCase Coverage Results" MODIFIED="1525484594475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_user_test_UserTestCase_test_register_tag_invalid.coverage" NAME="Unittests for user_test.UserTestCase.test_register_tag_invalid Coverage Results" MODIFIED="1525502440851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FlaskrTestCase_test_follow.coverage" NAME="Unittests for friend_test.FlaskrTestCase.test_follow Coverage Results" MODIFIED="1525333040588" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_unfollow_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_unfollow_success Coverage Results" MODIFIED="1525423990139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$weibo.coverage" NAME="weibo Coverage Results" MODIFIED="1525596355521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_delete_post_fail.coverage" NAME="Unittests for post_test.PostTestCase.test_delete_post_fail Coverage Results" MODIFIED="1525869824658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_dislike_post_fail.coverage" NAME="Unittests for post_test.PostTestCase.test_dislike_post_fail Coverage Results" MODIFIED="1526023336362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_following_list_success.coverage" NAME="Unittests for friend_test.FriendTestCase.test_following_list_success Coverage Results" MODIFIED="1525506888774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follow_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follow_success Coverage Results" MODIFIED="1525422573310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follow_myself.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follow_myself Coverage Results" MODIFIED="1525423691604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_edit_post_sucess.coverage" NAME="Unittests for post_test.PostTestCase.test_edit_post_sucess Coverage Results" MODIFIED="1525869818887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_follow_followed.coverage" NAME="Unittests for friend_test.FriendTestCase.test_follow_followed Coverage Results" MODIFIED="1525506656398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase.coverage" NAME="Unittests for friend_test.FriendTestCase Coverage Results" MODIFIED="1525486616626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_following_list_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_following_list_success Coverage Results" MODIFIED="1525438419745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_edit_post_fail.coverage" NAME="Unittests for post_test.PostTestCase.test_edit_post_fail Coverage Results" MODIFIED="1525870475657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FlaskrTestCase.coverage" NAME="Unittests for friend_test.FlaskrTestCase Coverage Results" MODIFIED="1525333647309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_login_logout.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_login_logout Coverage Results" MODIFIED="1525420368646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_unfollow_fail.coverage" NAME="Unittests for friend_test.FriendTestCase.test_unfollow_fail Coverage Results" MODIFIED="1525506882020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_delete_post_sucess.coverage" NAME="Unittests for post_test.PostTestCase.test_delete_post_sucess Coverage Results" MODIFIED="1525868744045" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_search_user_fail.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_search_user_fail Coverage Results" MODIFIED="1525446069886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_search_user.coverage" NAME="Unittests for friend_test.FriendTestCase.test_search_user Coverage Results" MODIFIED="1525504600667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_following_list_fail.coverage" NAME="Unittests for friend_test.FriendTestCase.test_following_list_fail Coverage Results" MODIFIED="1525506892917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_login_success.coverage" NAME="Unittests for friend_test.FriendTestCase.test_login_success Coverage Results" MODIFIED="1525504984499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_search_user.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_search_user Coverage Results" MODIFIED="1525446044683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_follower_list_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_follower_list_success Coverage Results" MODIFIED="1525438224015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_follow_success.coverage" NAME="Unittests for friend_test.FriendTestCase.test_follow_success Coverage Results" MODIFIED="1525506933603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_in_app_test_py.coverage" NAME="Unittests in app_test.py Coverage Results" MODIFIED="1525423837843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_in_friend_test_py.coverage" NAME="Unittests in friend_test.py Coverage Results" MODIFIED="1525500474589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_login_success.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_login_success Coverage Results" MODIFIED="1525445919562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Flask__test_friend_test_py_.coverage" NAME="Flask (test/friend_test.py) Coverage Results" MODIFIED="1525333820271" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_post_content_invalid.coverage" NAME="Unittests for post_test.PostTestCase.test_post_content_invalid Coverage Results" MODIFIED="1525866873796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_follower_list_fail.coverage" NAME="Unittests for friend_test.FriendTestCase.test_follower_list_fail Coverage Results" MODIFIED="1525506906844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/weibo$Unittests_for_post_test_PostTestCase_test_dislike_post_success.coverage" NAME="Unittests for post_test.PostTestCase.test_dislike_post_success Coverage Results" MODIFIED="1526023181793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_user_test_UserTestCase_test_register_success.coverage" NAME="Unittests for user_test.UserTestCase.test_register_success Coverage Results" MODIFIED="1525501651968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_follow_myself.coverage" NAME="Unittests for friend_test.FriendTestCase.test_follow_myself Coverage Results" MODIFIED="1525506749611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_app_test_FlaskrTestCase_test_unfollow_fail.coverage" NAME="Unittests for app_test.FlaskrTestCase.test_unfollow_fail Coverage Results" MODIFIED="1525423747138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_search_user_fail.coverage" NAME="Unittests for friend_test.FriendTestCase.test_search_user_fail Coverage Results" MODIFIED="1525504409562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/weibo$Unittests_for_friend_test_FriendTestCase_test_unfollow_success.coverage" NAME="Unittests for friend_test.FriendTestCase.test_unfollow_success Coverage Results" MODIFIED="1525506860934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="post.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="post.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/post.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+            <state relative-caret-position="-2081">
+              <caret line="9" column="43" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="43" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -74,7 +82,7 @@
       <file leaf-file-name="friend.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/scripts/friend.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
+            <state relative-caret-position="968">
               <caret line="44" column="17" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="17" />
             </state>
           </provider>
@@ -83,7 +91,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="-506">
               <caret line="34" column="114" selection-start-line="34" selection-start-column="114" selection-end-line="34" selection-end-column="114" />
             </state>
           </provider>
@@ -92,11 +100,8 @@
       <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/scripts/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="933">
-              <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -104,7 +109,7 @@
       <file leaf-file-name="friend_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/friend_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="1254">
               <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="47" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
@@ -116,8 +121,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="286">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="29" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -134,23 +139,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="64" column="29" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="29" />
+            <state relative-caret-position="338">
+              <caret line="124" column="37" lean-forward="true" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="37" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="db.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="53" column="70" lean-forward="true" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -212,12 +208,12 @@
         <option value="$PROJECT_DIR$/views/friend.py" />
         <option value="$PROJECT_DIR$/friend_test.py" />
         <option value="$PROJECT_DIR$/db.sql" />
-        <option value="$PROJECT_DIR$/views/post.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/static/scripts/home.js" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/views/home.py" />
+        <option value="$PROJECT_DIR$/views/post.py" />
         <option value="$PROJECT_DIR$/post_test.py" />
+        <option value="$PROJECT_DIR$/static/scripts/home.js" />
       </list>
     </option>
   </component>
@@ -332,7 +328,7 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="launchJavascriptDebuger" value="false" />
     </configuration>
-    <configuration name="Unittests for friend_test.FriendTestCase.test_follow_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for post_test.PostTestCase.test_dislike_post_fail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="weibo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -343,10 +339,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;friend_test.FriendTestCase.test_follow_success&quot;" />
+      <option name="_new_target" value="&quot;post_test.PostTestCase.test_dislike_post_fail&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for friend_test.FriendTestCase.test_follower_list_fail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for post_test.PostTestCase.test_dislike_post_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="weibo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -357,10 +353,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;friend_test.FriendTestCase.test_follower_list_fail&quot;" />
+      <option name="_new_target" value="&quot;post_test.PostTestCase.test_dislike_post_success&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for friend_test.FriendTestCase.test_follower_list_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for post_test.PostTestCase.test_like_post_fail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="weibo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -371,10 +367,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;friend_test.FriendTestCase.test_follower_list_success&quot;" />
+      <option name="_new_target" value="&quot;post_test.PostTestCase.test_like_post_fail&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for friend_test.FriendTestCase.test_following_list_fail" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for post_test.PostTestCase.test_like_post_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="weibo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -385,10 +381,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;friend_test.FriendTestCase.test_following_list_fail&quot;" />
+      <option name="_new_target" value="&quot;post_test.PostTestCase.test_like_post_success&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="Unittests for friend_test.FriendTestCase.test_following_list_success" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in post_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="weibo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -399,24 +395,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;friend_test.FriendTestCase.test_following_list_success&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/post_test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list>
       <item itemvalue="Flask server.weibo" />
-      <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_following_list_success" />
-      <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_following_list_fail" />
-      <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_follower_list_success" />
-      <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_follower_list_fail" />
-      <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_follow_success" />
+      <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_like_post_success" />
+      <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_like_post_fail" />
+      <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_dislike_post_success" />
+      <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_dislike_post_fail" />
+      <item itemvalue="Python tests.Unittests in post_test.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_follow_success" />
-        <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_follower_list_fail" />
-        <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_follower_list_success" />
-        <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_following_list_fail" />
-        <item itemvalue="Python tests.Unittests for friend_test.FriendTestCase.test_following_list_success" />
+        <item itemvalue="Python tests.Unittests in post_test.py" />
+        <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_dislike_post_fail" />
+        <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_like_post_success" />
+        <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_dislike_post_success" />
+        <item itemvalue="Python tests.Unittests for post_test.PostTestCase.test_like_post_fail" />
       </list>
     </recent_temporary>
   </component>
@@ -449,35 +445,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_follow_success - 2018.05.05 at 15h 50m 05s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_follow_success" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_like_post_success - 2018.05.09 at 20h 56m 36s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_like_post_success" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_follow_followed - 2018.05.05 at 15h 52m 02s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_follow_followed" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_like_post_success - 2018.05.09 at 21h 02m 03s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_like_post_success" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_follow_myself - 2018.05.05 at 15h 53m 38s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_follow_myself" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_like_post_success - 2018.05.09 at 21h 04m 44s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_like_post_success" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_unfollow_success - 2018.05.05 at 15h 54m 22s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_unfollow_success" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_like_post_fail - 2018.05.11 at 15h 18m 31s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_like_post_fail" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_unfollow_fail - 2018.05.05 at 15h 54m 42s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_unfollow_fail" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_dislike_post_success - 2018.05.11 at 15h 19m 44s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_dislike_post_success" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_following_list_success - 2018.05.05 at 15h 54m 49s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_following_list_success" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_like_post_success - 2018.05.11 at 15h 19m 50s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_like_post_success" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_following_list_fail - 2018.05.05 at 15h 54m 55s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_following_list_fail" configurationId="tests" />
+    <history-entry file="Unittests_for_post_test_PostTestCase_test_dislike_post_fail - 2018.05.11 at 15h 22m 19s.xml">
+      <configuration name="Unittests for post_test.PostTestCase.test_dislike_post_fail" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_follower_list_success - 2018.05.05 at 15h 55m 01s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_follower_list_success" configurationId="tests" />
+    <history-entry file="Unittests_in_post_test_py - 2018.05.11 at 15h 22m 49s.xml">
+      <configuration name="Unittests in post_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_follower_list_fail - 2018.05.05 at 15h 55m 07s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_follower_list_fail" configurationId="tests" />
+    <history-entry file="Unittests_in_post_test_py - 2018.05.12 at 14h 12m 31s.xml">
+      <configuration name="Unittests in post_test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_friend_test_FriendTestCase_test_follow_success - 2018.05.05 at 15h 55m 34s.xml">
-      <configuration name="Unittests for friend_test.FriendTestCase.test_follow_success" configurationId="tests" />
+    <history-entry file="Unittests_in_post_test_py - 2018.05.12 at 14h 13m 49s.xml">
+      <configuration name="Unittests in post_test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -485,19 +481,19 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.10375061" side_tool="true" visible="true" weight="0.33536586" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.105211884" side_tool="true" visible="true" weight="0.33536586" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49926937" weight="0.3292683" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8295178" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8285436" weight="0.3292683" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24452022" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24452022" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8962494" visible="true" weight="0.33536586" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.8947881" visible="true" weight="0.33536586" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -584,11 +580,10 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="71" />
+      <option name="time" value="83" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/schema.sql" />
     <entry file="file://$PROJECT_DIR$/static/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -757,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3.5/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="599" selection-start-line="599" selection-end-line="599" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-182">
@@ -803,9 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,18 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/scripts/friend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
+        <state relative-caret-position="968">
           <caret line="44" column="17" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="89" column="1" lean-forward="true" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,15 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="53" column="70" lean-forward="true" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="114" selection-start-line="34" selection-start-column="114" selection-end-line="34" selection-end-column="114" />
+        <state relative-caret-position="1166">
+          <caret line="53" column="70" selection-start-line="53" selection-start-column="70" selection-end-line="53" selection-end-column="70" />
         </state>
       </provider>
     </entry>
@@ -880,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="286">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="29" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -890,8 +858,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/friend_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="1254">
           <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.5/site-packages/flask/json.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python3.5/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="599" selection-start-line="599" selection-end-line="599" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/scripts/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-506">
+          <caret line="34" column="114" selection-start-line="34" selection-start-column="114" selection-end-line="34" selection-end-column="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="124" column="37" lean-forward="true" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="37" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -900,20 +902,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/post.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="59" column="39" lean-forward="true" selection-start-line="59" selection-start-column="39" selection-end-line="59" selection-end-column="39" />
+        <state relative-caret-position="-2081">
+          <caret line="9" column="43" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="43" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>

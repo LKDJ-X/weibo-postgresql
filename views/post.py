@@ -4,8 +4,10 @@ from helpers import sql
 INVALID_CONTENT_SIZE = 'Invalid content size (140 characters maximum)'
 INVALID_NO_CONTENT = 'At least write something before posting'
 INTERNAL_ERROR = 'Internal error occurred, please try again later'
-POST_NOT_FOUND = 'The post was not found'
+POST_NOT_FOUND = 'The post does not found'
 EMPTY_POST = 'Your post is empty'
+LIKED_POST = 'You have liked the post'
+UNLIKED_POST = 'You have not liked the post'
 
 
 def post():
@@ -84,11 +86,18 @@ def like_post(post_id):
         return redirect(url_for('home'))
 
     if request.method == 'POST':
-        results = sql.execute_update('INSERT INTO likes_posts (post_id, user_id) VALUES (%s, %s) ON CONFLICT DO NOTHING',
-                                     (post_id, user_id))
-
-        if results != 1:
+        posts = sql.execute_query(
+            'SELECT post_id, user_id FROM posts p WHERE p.post_id = %s', (post_id,))
+        if(len(posts) < 1):
             error = POST_NOT_FOUND
+        else:
+            like_rel = sql.execute_query('SELECT post_id, user_id FROM likes_posts lp WHERE lp.post_id = %s AND user_id = %s',
+                                    (post_id, user_id))
+            if(len(like_rel) > 0):
+                error = LIKED_POST
+            else:
+                results = sql.execute_update('INSERT INTO likes_posts (post_id, user_id) VALUES (%s, %s) ON CONFLICT DO NOTHING',
+                                     (post_id, user_id))
 
     return json.dumps({'success': error is None, 'error': error})
 
@@ -101,11 +110,19 @@ def dislike_post(post_id):
         return redirect(url_for('home'))
 
     if request.method == 'POST':
-        results = sql.execute_update('DELETE FROM likes_posts WHERE user_id = %s AND post_id = %s',
-                                     (user_id, post_id))
-
-        if results != 1:
+        posts = sql.execute_query(
+            'SELECT post_id, user_id FROM posts p WHERE p.post_id = %s', (post_id,))
+        if (len(posts) < 1):
             error = POST_NOT_FOUND
+        else:
+            like_rel = sql.execute_query(
+                'SELECT post_id, user_id FROM likes_posts lp WHERE lp.post_id = %s AND user_id = %s',
+                (post_id, user_id))
+            if (len(like_rel) < 1):
+                error = UNLIKED_POST
+            else:
+                results = sql.execute_update('DELETE FROM likes_posts WHERE user_id = %s AND post_id = %s',
+                                     (user_id, post_id))
 
     return json.dumps({'success': error is None, 'error': error})
 

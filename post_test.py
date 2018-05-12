@@ -1,5 +1,6 @@
 import unittest
 import app
+from flask import json
 
 
 class PostTestCase(unittest.TestCase):
@@ -47,14 +48,16 @@ class PostTestCase(unittest.TestCase):
 
     def test_post_content_invalid(self):
         self.login("7777888@qq.com", "11111111")
-        rv = self.post("")
+        rv = self.post(None)
         assert 'At least write something before posting' in rv.data.decode()
 
     def test_delete_post_sucess(self):
         self.login("7777888@qq.com", "11111111")
         result = self.post("test1")
-        post_id = result.data.decode()['post_data']['post_id']
-        rv = self.delete_post(post_id)
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        rv = self.delete_post(str(post_id))
         assert 'true' in rv.data.decode()
 
     def test_delete_post_fail(self):
@@ -65,18 +68,67 @@ class PostTestCase(unittest.TestCase):
     def test_edit_post_sucess(self):
         self.login("7777888@qq.com", "11111111")
         result = self.post("test edit")
-        post_id = result.data.decode()['post_data']['post_id']
-        rv = self.edit_post(post_id, "edit success")
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        rv = self.edit_post(str(post_id), "edit success")
         assert 'true' in rv.data.decode()
+
+    def test_edit_post_fail(self):
+        self.login("7777888@qq.com", "11111111")
+        result = self.post("test edit")
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        rv = self.edit_post(str(post_id), None)
+        assert 'Your post is empty' in rv.data.decode()
+
+        rv = self.edit_post("200", "edit")
+        assert 'The post does not found' in rv.data.decode()
+
+    def test_like_post_success(self):
+        self.login("7777888@qq.com", "11111111")
+        result = self.post("test like post")
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        rv = self.like_post(str(post_id))
+        assert 'true' in rv.data.decode()
+
+    def test_like_post_fail(self):
+        self.login("7777888@qq.com", "11111111")
+        rv = self.like_post("123")
+        assert 'The post does not found' in rv.data.decode()
+        result = self.post("test like post liked")
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        self.like_post(str(post_id))
+        rv = self.like_post(str(post_id))
+        assert 'You have liked the post' in rv.data.decode()
+
+    def test_dislike_post_success(self):
+        self.login("7777888@qq.com", "11111111")
+        result = self.post("test dislike post")
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        self.like_post(str(post_id))
+        rv = self.dislike_post(str(post_id))
+        assert 'true' in rv.data.decode()
+
+    def test_dislike_post_fail(self):
+        self.login("7777888@qq.com", "11111111")
+        rv = self.dislike_post("123")
+        assert 'The post does not found' in rv.data.decode()
+        result = self.post("test dislike post")
+        resDec = result.data.decode()
+        params = json.loads(resDec)
+        post_id = params['post_data']['post_id']
+        rv = self.dislike_post(str(post_id))
+        assert 'You have not liked the post' in rv.data.decode()
 
 
 if __name__ == '__main__':
-    #unittest.main(verbosity=2)
-    # 构造测试集
-    suite = unittest.TestSuite()
-    suite.addTest(PostTestCase("test_login_success"))
-    
-    # 执行测试
-    runner = unittest.TextTestRunner()
-    runner.run(suite)
+    unittest.main(verbosity=2)
 
